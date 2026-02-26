@@ -20,7 +20,8 @@
                 <span class="navbar-brand fw-bold mb-0">Solar Plant Estimator <span class="opacity-75">PRO</span></span>
             </div>
             <div class="ms-auto">
-                <span class="badge bg-dark text-white py-2 px-3 rounded-pill shadow-sm" id="currentStepBadge">Step 1 of 5</span>
+                <span class="badge bg-dark text-white py-2 px-3 rounded-pill shadow-sm" id="currentStepBadge">Step 1 of
+                    5</span>
             </div>
         </div>
     </nav>
@@ -35,7 +36,8 @@
             <div class="col-12 col-lg-9 col-xl-8">
 
                 <div class="progress mb-4 mx-2" style="height: 8px; border-radius: 10px;">
-                    <div id="mainProgress" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 20%;"></div>
+                    <div id="mainProgress" class="progress-bar progress-bar-striped progress-bar-animated"
+                        role="progressbar" style="width: 20%;"></div>
                 </div>
 
                 <div id="wizardWrapper">
@@ -48,31 +50,45 @@
                         <div class="row justify-content-center">
                             <div class="col-md-8">
                                 <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center mb-4">
-                                    <button type="button" class="btn btn-outline-primary px-4 py-2" onclick="toggleLogoUpload(true)">Yes, Upload New</button>
-                                    <button type="button" class="btn btn-primary px-4 py-2" onclick="nextStep()">No, Keep Existing</button>
+                                    <button type="button" class="btn btn-outline-primary px-4 py-2"
+                                        onclick="toggleLogoUpload(true)">Yes, Upload New</button>
+                                    <button type="button" class="btn btn-primary px-4 py-2" onclick="nextStep()">No,
+                                        Keep Existing</button>
                                 </div>
                                 <div id="logoUploadSection" class="d-none animate-fade-in">
                                     <div class="upload-box p-4 border-dashed rounded text-center mb-3">
-                                        <input type="file" id="companyLogoInput" class="form-control mb-2" accept="image/*" onchange="handleCompanyLogo(event)">
-                                        <p class="small text-muted mb-0">Recommended: PNG with Transparent Background</p>
+                                        <input type="file" id="companyLogoInput" class="form-control mb-2"
+                                            accept="image/*" onchange="handleCompanyLogo(event)">
+                                        <p class="small text-muted mb-0">Recommended: PNG with Transparent Background
+                                        </p>
                                     </div>
-                                    <button type="button" class="btn btn-primary w-100" onclick="nextStep()">Continue to Client Info</button>
+                                    <button type="button" class="btn btn-primary w-100" onclick="nextStep()">Continue to
+                                        Client Info</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="step-card d-none shadow-lg" id="step2">
-                        <h4 class="mb-4 border-bottom pb-2"><i data-lucide="user" class="me-2 text-primary"></i>Client Information</h4>
+                        <h4 class="mb-4 border-bottom pb-2"><i data-lucide="user" class="me-2 text-primary"></i>Client
+                            Information</h4>
                         <div class="row g-3">
-                            <div class="col-md-12"><input type="text" id="clientName" class="form-control form-control-lg" placeholder="Business / Client Name*" required></div>
-                            <div class="col-md-6"><input type="text" id="contactPerson" class="form-control" placeholder="Contact Person"></div>
-                            <div class="col-md-6"><input type="tel" id="contactNumber" class="form-control" placeholder="Mobile Number*" required></div>
-                            <div class="col-12"><input type="email" id="emailId" class="form-control" placeholder="Email Address*" required></div>
-                            <div class="col-12"><input type="text" id="address" class="form-control" placeholder="Site Address*" required></div>
-                            <div class="col-md-4"><input type="text" id="city" class="form-control" placeholder="City*" required></div>
+                            <div class="col-md-12"><input type="text" id="clientName"
+                                    class="form-control form-control-lg" placeholder="Business / Client Name*" required>
+                            </div>
+                            <div class="col-md-6"><input type="text" id="contactPerson" class="form-control"
+                                    placeholder="Contact Person"></div>
+                            <div class="col-md-6"><input type="tel" id="contactNumber" class="form-control"
+                                    placeholder="Mobile Number*" required></div>
+                            <div class="col-12"><input type="email" id="emailId" class="form-control"
+                                    placeholder="Email Address*" required></div>
+                            <div class="col-12"><input type="text" id="address" class="form-control"
+                                    placeholder="Site Address*" required></div>
+                            <div class="col-md-4"><input type="text" id="city" class="form-control" placeholder="City*"
+                                    required></div>
                             <div class="col-md-4"><select id="state" class="form-select"></select></div>
-                            <div class="col-md-4"><input type="text" id="country" class="form-control" value="India"></div>
+                            <div class="col-md-4"><input type="text" id="country" class="form-control" value="India">
+                            </div>
                         </div>
                         <div class="d-flex justify-content-between mt-5">
                             <button class="btn btn-light px-4" onclick="prevStep()">Back</button>
@@ -81,7 +97,8 @@
                     </div>
 
                     <div class="step-card d-none shadow-lg" id="step3">
-                        <h4 class="mb-4 border-bottom pb-2"><i data-lucide="zap" class="me-2 text-primary"></i>System & Pricing</h4>
+                        <h4 class="mb-4 border-bottom pb-2"><i data-lucide="zap" class="me-2 text-primary"></i>System &
+                            Pricing</h4>
                         <div class="row g-3">
                             <div class="col-md-12">
                                 <label class="small fw-bold mb-1">System Type</label>
@@ -94,20 +111,28 @@
                             <div class="col-md-6">
                                 <label class="small fw-bold mb-1">Plant Capacity*</label>
                                 <div class="input-group">
-                                    <input type="number" id="capacity" class="form-control" placeholder="Value" required>
-                                    <select id="unit" class="form-select" style="max-width: 90px;"><option value="KW">KW</option><option value="MW">MW</option></select>
+                                    <input type="number" id="capacity" class="form-control" placeholder="Value"
+                                        required>
+                                    <select id="unit" class="form-select" style="max-width: 90px;">
+                                        <option value="KW">KW</option>
+                                        <option value="MW">MW</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <label class="small fw-bold mb-1">Price per Watt (₹)*</label>
                                 <input type="number" id="pricePerWatt" class="form-control" value="65" required>
                             </div>
-                            
+
                             <div id="batteryInputSection" class="col-12 d-none">
                                 <div class="bg-light p-3 rounded row g-2 border">
-                                    <div class="col-md-4"><label class="tiny-label">Backup (kWh)</label><input type="number" id="reqKwh" class="form-control" placeholder="e.g. 10" required></div>
-                                    <div class="col-md-4"><label class="tiny-label">Rating (Ah)</label><input type="number" id="battAh" class="form-control" value="150" required></div>
-                                    <div class="col-md-4"><label class="tiny-label">Voltage (V)</label><input type="number" id="sysVolt" class="form-control" value="12" required></div>
+                                    <div class="col-md-4"><label class="tiny-label">Backup (kWh)</label><input
+                                            type="number" id="reqKwh" class="form-control" placeholder="e.g. 10"
+                                            required></div>
+                                    <div class="col-md-4"><label class="tiny-label">Rating (Ah)</label><input
+                                            type="number" id="battAh" class="form-control" value="150" required></div>
+                                    <div class="col-md-4"><label class="tiny-label">Voltage (V)</label><input
+                                            type="number" id="sysVolt" class="form-control" value="12" required></div>
                                 </div>
                             </div>
 
@@ -130,13 +155,25 @@
                     </div>
 
                     <div class="step-card d-none shadow-lg" id="step4">
-                        <h4 class="mb-4 border-bottom pb-2"><i data-lucide="package" class="me-2 text-primary"></i>Bill of Materials</h4>
+                        <h4 class="mb-4 border-bottom pb-2"><i data-lucide="package" class="me-2 text-primary"></i>Bill
+                            of Materials</h4>
                         <div class="row g-3">
-                            <div class="col-md-6"><label class="small fw-bold mb-1">Module Make & Wp</label><div class="input-group"><input type="text" id="modBrand" class="form-control" placeholder="Make*" required><input type="number" id="modWp" class="form-control" placeholder="545" required></div></div>
-                            <div class="col-md-6"><label class="small fw-bold mb-1">Inverter Brand</label><input type="text" id="invBrand" class="form-control" placeholder="e.g. Sungrow" required></div>
-                            <div class="col-md-6"><label class="small fw-bold mb-1">Battery Brand (Optional)</label><input type="text" id="battBrand" class="form-control" placeholder="e.g. Exide" required></div>
-                            <div class="col-md-6"><label class="small fw-bold mb-1">Structure Type</label><input type="text" id="structBrand" class="form-control" value="Hot-dipped GI"></div>
-                            <div class="col-12"><label class="small fw-bold mb-1">Quotation Prepared By</label><input type="text" id="createdBy" class="form-control" placeholder="Your Name" required></div>
+                            <div class="col-md-6"><label class="small fw-bold mb-1">Module Make & Wp</label>
+                                <div class="input-group"><input type="text" id="modBrand" class="form-control"
+                                        placeholder="Make*" required><input type="number" id="modWp"
+                                        class="form-control" placeholder="545" required></div>
+                            </div>
+                            <div class="col-md-6"><label class="small fw-bold mb-1">Inverter Brand</label><input
+                                    type="text" id="invBrand" class="form-control" placeholder="e.g. Sungrow" required>
+                            </div>
+                            <div class="col-md-6"><label class="small fw-bold mb-1">Battery Brand
+                                    (Optional)</label><input type="text" id="battBrand" class="form-control"
+                                    placeholder="e.g. Exide" required></div>
+                            <div class="col-md-6"><label class="small fw-bold mb-1">Structure Type</label><input
+                                    type="text" id="structBrand" class="form-control" value="Hot-dipped GI"></div>
+                            <div class="col-12"><label class="small fw-bold mb-1">Quotation Prepared By</label><input
+                                    type="text" id="createdBy" class="form-control" placeholder="Your Name" required>
+                            </div>
                         </div>
                         <div class="d-flex justify-content-between mt-5">
                             <button class="btn btn-light px-4" onclick="prevStep()">Back</button>
@@ -145,12 +182,15 @@
                     </div>
 
                     <div class="step-card d-none shadow-lg" id="step5">
-                        <h4 class="mb-4 border-bottom pb-2"><i data-lucide="file-edit" class="me-2 text-primary"></i>Customize Terms</h4>
+                        <h4 class="mb-4 border-bottom pb-2"><i data-lucide="file-edit"
+                                class="me-2 text-primary"></i>Customize Terms</h4>
                         <p class="text-muted small">Edit specific clauses for this quotation below.</p>
-                        <textarea id="customTerms" class="form-control mb-3" rows="10" style="font-family: monospace; font-size: 13px;"></textarea>
+                        <textarea id="customTerms" class="form-control mb-3" rows="10"
+                            style="font-family: monospace; font-size: 13px;"></textarea>
                         <div class="d-flex justify-content-between mt-4">
                             <button class="btn btn-light px-4" onclick="prevStep()">Back</button>
-                            <button class="btn btn-success px-5" onclick="generateProfessionalPreview()">PREVIEW QUOTATION</button>
+                            <button class="btn btn-success px-5" onclick="generateProfessionalPreview()">PREVIEW
+                                QUOTATION</button>
                         </div>
                     </div>
                 </div>
@@ -158,12 +198,15 @@
                 <div class="card border-0 shadow-sm mt-5 mb-5" id="historySection">
                     <div class="card-body p-4">
                         <div class="d-flex justify-content-between align-items-center mb-3">
-                            <h6 class="text-muted fw-bold mb-0"><i data-lucide="history" class="me-2"></i>Recent Activity Log</h6>
-                            <button class="btn btn-link btn-sm text-danger text-decoration-none p-0" onclick="clearUsageLog()">
+                            <h6 class="text-muted fw-bold mb-0"><i data-lucide="history" class="me-2"></i>Recent
+                                Activity Log</h6>
+                            <button class="btn btn-link btn-sm text-danger text-decoration-none p-0"
+                                onclick="clearUsageLog()">
                                 <i data-lucide="trash-2" style="width: 14px; height: 14px;" class="me-1"></i>Clear Log
                             </button>
                         </div>
-                        <div id="usageLog" class="list-group list-group-flush small overflow-auto" style="max-height: 250px;">
+                        <div id="usageLog" class="list-group list-group-flush small overflow-auto"
+                            style="max-height: 250px;">
                             <p class="text-muted italic m-0 p-3 text-center">No previous activity recorded.</p>
                         </div>
                     </div>
@@ -172,8 +215,10 @@
                 <div id="viewingScreen" class="d-none animate-fade-in">
                     <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 mb-4">
                         <div class="btn-group w-100 w-md-auto">
-                            <button class="btn btn-outline-secondary" onclick="backToEdit()"><i data-lucide="edit-3"></i></button>
-                            <button class="btn btn-outline-danger" onclick="resetApp()"><i data-lucide="home"></i> Home</button>
+                            <button class="btn btn-outline-secondary" onclick="backToEdit()"><i
+                                    data-lucide="edit-3"></i></button>
+                            <button class="btn btn-outline-danger" onclick="resetApp()"><i data-lucide="home"></i>
+                                Home</button>
                         </div>
                         <div class="d-flex gap-2 w-100 w-md-auto">
                             <button class="btn btn-info flex-fill d-md-none text-white" onclick="window.print()">
@@ -184,16 +229,41 @@
                             </button>
                         </div>
                     </div>
-                    
+
                     <div class="pdf-scroll-container">
                         <div id="pdfContent" class="pdf-wrapper shadow-lg">
-                            </div>
+                        </div>
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
+
+    <footer class="footer mt-auto py-4">
+        <div class="container text-center">
+            <div class="d-flex justify-content-center gap-3 mb-3">
+                <a href="https://www.linkedin.com/in/adevdeepanshuk" target="_blank" class="social-link shadow-sm"
+                    title="LinkedIn">
+                    <i data-lucide="linkedin"></i>
+                </a>
+                <a href="https://www.github.com/Analyst-Dev-Deepanshu-Kaushik" target="_blank"
+                    class="social-link shadow-sm" title="GitHub">
+                    <i data-lucide="github"></i>
+                </a>
+                <a href="https://adevdeepanshuk.pythonanywhere.com" target="_blank" class="social-link shadow-sm" title="Portfolio">
+                    <i data-lucide="globe"></i>
+                </a>
+            </div>
+            <p class="mb-0 text-muted small fw-medium">
+                Developed with ❤️ in <strong>India</strong> by
+                <span class="text-dark fw-bold">Deepanshu Kaushik</span>
+            </p>
+            <p class="tiny-text text-uppercase mt-1 tracking-wider">
+                Engineered for Solar Industry Professionals
+            </p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

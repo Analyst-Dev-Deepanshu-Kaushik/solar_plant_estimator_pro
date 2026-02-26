@@ -26,6 +26,45 @@ body {
     letter-spacing: 0.5px; 
 }
 
+/* Professional Footer Styling */
+.footer {
+    background-color: #ffffff;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    margin-top: 5rem !important; /* Spacing from the History Log */
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    background: white;
+    color: var(--dark-surface);
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid #f1f5f9;
+}
+
+.social-link:hover {
+    background: var(--solar-gradient);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(240, 156, 19, 0.2) !important;
+}
+
+.social-link i {
+    width: 20px;
+    height: 20px;
+}
+
+.tracking-wider {
+    letter-spacing: 1.5px;
+    font-size: 9px;
+    color: #94a3b8;
+}
+
 /* Production-Level Typography */
 h1, h2, h3, h4 { color: var(--dark-surface); }
 .display-6 { font-size: 1.75rem; line-height: 1.2; }
