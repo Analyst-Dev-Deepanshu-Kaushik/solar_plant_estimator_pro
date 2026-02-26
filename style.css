@@ -1,0 +1,157 @@
+/* --- Root Variables & Base --- */
+:root {
+    --solar-orange: #f06b13;
+    --eco-green: #2d5cb4;
+    --solar-gradient: linear-gradient(135deg, #f06b13, #2d5cb4);
+    --dark-surface: #2c3e50;
+    --bg-soft: #f4f7f9;
+}
+
+body {
+    background-color: var(--bg-soft);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #1e293b;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Layout Components --- */
+.navbar {
+    background-color: white;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.navbar-brand { 
+    color: var(--dark-surface) !important; 
+    letter-spacing: 0.5px; 
+}
+
+/* Production-Level Typography */
+h1, h2, h3, h4 { color: var(--dark-surface); }
+.display-6 { font-size: 1.75rem; line-height: 1.2; }
+
+@media (min-width: 768px) {
+    .display-6 { font-size: 2.5rem; }
+}
+
+/* --- Wizard Styling --- */
+.step-card {
+    background: white;
+    padding: 1.5rem; /* Compact for mobile */
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+@media (min-width: 768px) {
+    .step-card {
+        padding: 3rem; /* Spacious for desktop */
+        border-radius: 1.5rem;
+    }
+}
+
+/* Progress & Buttons */
+.progress { background-color: #e2e8f0; border-radius: 20px; }
+.progress-bar { 
+    background: var(--solar-gradient); 
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.btn-primary { 
+    background: var(--solar-gradient); 
+    border: none; 
+    transition: transform 0.2s;
+}
+.btn-primary:hover { 
+    filter: brightness(105%); 
+    transform: translateY(-1px);
+}
+.btn-success { background-color: var(--eco-green); border: none; }
+
+/* --- Feature Specifics --- */
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background: #fff4e5;
+    color: var(--solar-orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#usageLog {
+    scrollbar-width: thin;
+    scrollbar-color: var(--solar-orange) transparent;
+}
+
+#usageLog::-webkit-scrollbar { width: 4px; }
+#usageLog::-webkit-scrollbar-thumb {
+    background: var(--solar-orange);
+    border-radius: 10px;
+}
+
+textarea#customTerms {
+    border-left: 5px solid var(--solar-orange);
+    background-color: #fcfcfc;
+    resize: none;
+    line-height: 1.6;
+}
+
+/* --- Form Refinement --- */
+.form-control:focus, .form-select:focus {
+    border-color: var(--solar-orange);
+    box-shadow: 0 0 0 0.25rem rgba(240, 156, 19, 0.1);
+}
+
+.tiny-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #64748b;
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* --- PDF Responsive Logic --- */
+.pdf-scroll-container {
+    width: 100%;
+    overflow-x: auto; /* Crucial for mobile viewing */
+    padding: 10px 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+.pdf-wrapper {
+    width: 210mm; /* Standard A4 Width */
+    min-height: 297mm; /* Standard A4 Height */
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 50px rgba(0,0,0,0.15);
+}
+
+/* Handle print media properly */
+@media print {
+    body * { visibility: hidden; }
+    #pdfContent, #pdfContent * { visibility: visible; }
+    #pdfContent {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        box-shadow: none;
+        padding: 0;
+    }
+}
+
+/* --- Animations --- */
+.animate-fade-in { 
+    animation: fadeIn 0.4s ease-out; 
+}
+
+@keyframes fadeIn { 
+    from { opacity: 0; transform: translateY(15px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+.border-dashed { border: 2px dashed #cbd5e1; }
